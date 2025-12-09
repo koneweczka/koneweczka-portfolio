@@ -2,7 +2,7 @@ import { SectionCard } from "../../ui/SectionCard";
 
 export function AboutMe() {
   return (
-    <SectionCard className="space-y-4 md:space-y-6">
+    <SectionCard className="space-y-4 md:space-y-6" id="about">
       <h2 className="text-2xl md:text-3xl font-bold text-text-section-header underline decoration-brand-green-warmer">
         About Me
       </h2>

@@ -4,7 +4,7 @@ import { SkillItem } from "@/components/sections/SkillsSection/SkillItem";
 
 export function SkillsSection() {
   return (
-    <SectionCard className="space-y-4 md:space-y-6">
+    <SectionCard className="space-y-4 md:space-y-6" id="skills">
       <h2 className="text-2xl md:text-3xl font-bold text-text-section-header underline decoration-brand-green-warmer">
         Skills & Technologies
       </h2>

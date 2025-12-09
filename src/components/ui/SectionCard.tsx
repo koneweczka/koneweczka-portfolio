@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 interface SectionCardProps {
   className?: string;
   children: ReactNode;
+  id?: string;
   // TODO: Title maybe optional?
   title?: string;
 }
@@ -10,6 +11,7 @@ interface SectionCardProps {
 export function SectionCard({
   className = "",
   children,
+  id,
   title,
 }: SectionCardProps) {
   const classes = [
@@ -20,7 +22,7 @@ export function SectionCard({
     .join(" ");
 
   return (
-    <section className={classes}>
+    <section className={classes} id={id}>
       <h1>{title}</h1>
       {children}
     </section>

@@ -11,7 +11,7 @@ export function Footer() {
       id="contact"
       className="max-w-4xl mx-auto mb-6 px-4 py-6 
                  flex flex-col md:flex-row 
-                 items-center justify-between gap-4 "
+                 items-center justify-between gap-4"
     >
       <div className="flex items-center gap-2">
         <span className="font-semibold text-brand-turquoise">Koneweczka</span>

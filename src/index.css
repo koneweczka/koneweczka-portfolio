@@ -35,7 +35,9 @@
   --color-text-brand: #014052;
   /* TODO: Check if it is ok or maybe #4EA39F */
   --color-text-brand-dark: #74d9d5;
-  --color-text-main: #6e7977;
+  /* TODO: Or maybe better #52615f? */
+  --color-text-main: #52615f;
+  /* TODO: or check maybe this #eee3f9? */
   --color-text-main-dark: #9ca3af;
   /*  TODO: It can also be #D8DAD8, check */
   --color-text-projects-names-dark: #e5f4ff;

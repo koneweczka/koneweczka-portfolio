@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/Button";
 import { SectionCard } from "../../ui/SectionCard";
+import { scrollToSection } from "@/utils/scroll-to";
 
 export function Hero() {
-  function handleContactClick() {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  }
-
   return (
-    <SectionCard className="flex flex-col gap-6 md:flex-row md:items-center">
+    <SectionCard
+      className="flex flex-col gap-6 md:flex-row md:items-center"
+      id="hero"
+    >
       <div className="flex-1 space-y-4">
         <p className="text-text-main text-sm uppercase tracking-wide">
           Frontend Engineer · React · TypeScript
@@ -27,7 +27,10 @@ export function Hero() {
           >
             <Button>View CV</Button>
           </a>
-          <Button variant="secondary" onClick={handleContactClick}>
+          <Button
+            variant="secondary"
+            onClick={() => scrollToSection("contact")}
+          >
             Contact
           </Button>
         </div>
