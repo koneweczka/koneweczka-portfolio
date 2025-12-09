@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/Button";
 import { SectionCard } from "../../ui/SectionCard";
 
 export function Hero() {
+  function handleContactClick() {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <SectionCard className="flex flex-col gap-6 md:flex-row md:items-center">
       <div className="flex-1 space-y-4">
@@ -16,8 +20,16 @@ export function Hero() {
           a touch of elven magic ✨
         </p>
         <div className="flex flex-wrap gap-3">
-          <Button>View CV</Button>
-          <Button variant="secondary">Contact</Button>
+          <a
+            href="/agnieszka-konefal-cv-eng.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button>View CV</Button>
+          </a>
+          <Button variant="secondary" onClick={handleContactClick}>
+            Contact
+          </Button>
         </div>
       </div>
 
