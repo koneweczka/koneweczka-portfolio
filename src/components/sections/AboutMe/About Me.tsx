@@ -1,12 +1,10 @@
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionCard } from "../../ui/SectionCard";
 
 export function AboutMe() {
   return (
     <SectionCard className="space-y-4 md:space-y-6" id="about">
-      <h2 className="text-2xl md:text-3xl font-bold text-text-section-header dark:text-text-section-header-dark underline decoration-brand-green-warmer dark:decoration-brand-violet">
-        About Me
-      </h2>
-
+      <SectionHeader>About Me</SectionHeader>
       <p className="text-text-main dark:text-text-main-dark leading-relaxed">
         I am a Front-end & Platform Engineer with experience in React/TypeScript
         and a strong background in service reliability and data-driven

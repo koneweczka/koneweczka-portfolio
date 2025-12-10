@@ -17,7 +17,7 @@ export function Hero() {
         <h1 className="text-3xl md:text-4xl font-bold text-text-brand dark:text-text-brand-dark">
           I build legible, slightly magical interfaces.
         </h1>
-        <p className="text-text-main dark:text-text-main text-sm md:text-base max-w-xl">
+        <p className="text-text-main dark:text-text-main-dark text-sm md:text-base max-w-xl">
           Focused on clarity, stability, and a delightful user experience — with
           a touch of elven magic ✨
         </p>
@@ -47,7 +47,7 @@ export function Hero() {
       </div>
 
       <div className="flex-1 mt-6 md:mt-0 flex justify-center">
-        <div className="max-w-3xs rounded-2xl border-5 border-brand-green-warmer dark:border-brand-violet overflow-hidden shadow-md">
+        <div className="max-w-3xs rounded-2xl border-5 border-brand-green-warmer dark:border-underline-dark overflow-hidden shadow-md">
           <img
             src="/images/avatar1.png"
             alt="Elvish Dev"

@@ -1,11 +1,10 @@
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionCard } from "../../ui/SectionCard";
 
 export function AfterHours() {
   return (
     <SectionCard className="text-center" id="after-hours">
-      <h2 className="text-2xl md:text-3xl font-bold text-text-section-header dark:text-text-section-header-dark underline decoration-brand-green-warmer dark:decoration-brand-violet">
-        After Hours
-      </h2>
+      <SectionHeader>After Hours</SectionHeader>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
         <HobbyItem
           title="Forest Gravel Rider"
@@ -21,7 +20,7 @@ export function AfterHours() {
           image="/images/sailing.png"
         />
         <HobbyItem title="Rune-XP Huntress" image="/images/gaming.png" />
-
+        {/* TODO: Decide which one I want */}
         {/* <HobbyItem
           title="Spanish Sunseer"
           image="/images/spanish-explorer.png"
@@ -35,6 +34,7 @@ export function AfterHours() {
   );
 }
 
+// TODO: Should be moved or not?
 function HobbyItem({ title, image }: { title: string; image: string }) {
   return (
     <div className="flex flex-col items-center mb-4 pt-2 pb-4 px-2 md:pb-6">

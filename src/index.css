@@ -26,22 +26,23 @@
   --color-bg-chip-dark: #294245;
   /* TODO: Check if this is ok or too light */
   --color-bg-box-project: #bbe6da;
-  --color-bg-box-project-dark: #014052;
+  --color-bg-box-project-dark: #04353f;
   --color-bg-icon: #1ac3d6;
 
   --color-text-brand: #014052;
   /* TODO: Check if it is ok or maybe #4EA39F */
   --color-text-brand-dark: #74d9d5;
   /* TODO: Or maybe better #52615f? */
-  --color-text-main: #52615f;
+  --color-text-main: #2f4745;
   /* TODO: or check maybe this #eee3f9? */
-  --color-text-main-dark: #9ca3af;
+  --color-text-main-dark: #819d9a;
   /*  TODO: It can also be #D8DAD8, check */
   --color-text-projects-names-dark: #e5f4ff;
   --color-text-section-header: #21b2cd;
   --color-text-section-header-dark: #65b8a7;
 
-  --color-border-dark: #7be1ca;
+  --color-border-dark: #3cccd9;
+  --color-underline-dark: #285b55;
 }
 
 /* TODO: To delete later */

@@ -1,16 +1,16 @@
 import { SectionCard } from "../../ui/SectionCard";
 import { SkillBox } from "@/components/sections/SkillsSection/SkillBox";
 import { SkillItem } from "@/components/sections/SkillsSection/SkillItem";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function SkillsSection() {
   return (
     <SectionCard className="space-y-4 md:space-y-6 " id="skills">
-      <h2 className="text-2xl md:text-3xl font-bold text-text-section-header dark:text-text-section-header-dark underline decoration-brand-green-warmer dark:decoration-brand-violet">
-        Skills & Technologies
-      </h2>
+      <SectionHeader>Skills & Technologies</SectionHeader>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 ">
         <SkillBox title="Frontend Development">
+          {/* TODO: Maybe map these skills? Move to consts? */}
           <ul className="space-y-1">
             <SkillItem>React</SkillItem>
             <SkillItem>TypeScript</SkillItem>
