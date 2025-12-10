@@ -6,7 +6,7 @@ import { DesignSystemPreview } from "./dev/DesignSystemPreview";
 import { Footer } from "./components/layout/Footer/Footer";
 import { Header } from "./components/layout/Header/Header";
 import { Hero } from "./components/sections/Hero/Hero";
-import { Projects } from "./components/sections/Projects/Projects";
+// import { Projects } from "./components/sections/Projects/Projects";
 import { SkillsSection } from "./components/sections/SkillsSection/SkillsSection";
 
 function App() {
@@ -14,14 +14,55 @@ function App() {
 
   return (
     <>
-      <div className="bg-bg-light min-h-screen">
-        <div className="max-w-5xl mx-auto px-4">
+      <div className="bg-bg-light dark:bg-bg-dark min-h-screen relative overflow-hidden">
+        {/* TODO: Move repeated classes somewhere */}
+        <img
+          src="/images/corner-top-left.png"
+          alt="Dekoracja górny lewy róg"
+          className="hidden md:block dark:hidden pointer-events-none select-none absolute top-4 left-4 w-56 h-56 z-10"
+        />
+        <img
+          src="/images/dark-top-left.png"
+          alt="Dekoracja górny lewy róg"
+          className="hidden md:dark:block pointer-events-none select-none absolute top-4 left-4 w-56 h-56 z-10"
+        />
+        <img
+          src="/images/corner-top-right.png"
+          alt="Dekoracja górny prawy róg"
+          className="hidden md:block dark:hidden pointer-events-none select-none absolute top-4 right-4 w-56 h-56 z-10"
+        />
+        <img
+          src="/images/dark-top-right.png"
+          alt="Dekoracja górny prawy róg"
+          className="hidden md:dark:block pointer-events-none select-none absolute top-4 right-4 w-56 h-56 z-10"
+        />
+        <img
+          src="/images/corner-bottom-left.png"
+          alt="Dekoracja dolny lewy róg"
+          className="hidden md:block dark:hidden pointer-events-none select-none absolute bottom-4 left-4 w-56 h-56 z-10"
+        />
+        <img
+          src="/images/dark-bottom-left.png"
+          alt="Dekoracja dolny lewy róg"
+          className="hidden md:dark:block pointer-events-none select-none absolute bottom-4 left-4 w-56 h-56 z-10"
+        />
+        <img
+          src="/images/corner-bottom-right.png"
+          alt="Dekoracja dolny prawy róg"
+          className="hidden md:block dark:hidden pointer-events-none select-none absolute bottom-4 right-4 w-56 h-56 z-10"
+        />
+        <img
+          src="/images/dark-bottom-right.png"
+          alt="Dekoracja dolny prawy róg"
+          className="hidden md:dark:block pointer-events-none select-none absolute bottom-4 right-4 w-56 h-56 z-10"
+        />
+        <div className="relative max-w-5xl mx-auto px-4">
           {/* TODO: This can be removed when creating Storybook */}
           {import.meta.env.DEV && (
             <Button
               onClick={() => setShowPlayground((prev) => !prev)}
               className="fixed bottom-4 right-4 z-50 rounded-full px-3 py-2 text-xs font-semibold
-                     bg-brand-primary text-bg-dark shadow-lg"
+                     bg-brand-turquoise dark:bg-brand-turquoise-dark text-bg-dark shadow-lg"
             >
               {showPlayground ? "Hide DS" : "Show DS"}
             </Button>
@@ -31,7 +72,8 @@ function App() {
           <Hero />
           <AboutMe />
           <SkillsSection />
-          <Projects />
+          {/* TODO: Uncomment when added */}
+          {/* <Projects /> */}
           <AfterHours />
           <Footer />
         </div>

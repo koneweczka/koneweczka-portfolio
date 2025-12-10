@@ -14,8 +14,12 @@ export function Footer() {
                  items-center justify-between gap-4"
     >
       <div className="flex items-center gap-2">
-        <span className="font-semibold text-brand-turquoise">Koneweczka</span>
-        <span className="text-text-muted text-brand-turquoise">with</span>
+        <span className="font-semibold text-brand-turquoise dark:text-brand-turquoise-dark">
+          Koneweczka
+        </span>
+        <span className="text-text-muted text-brand-turquoise dark:text-brand-turquoise-dark">
+          with
+        </span>
         <IconHeart
           size={21}
           className="text-brand-turquoise-dark fill-brand-turquoise/30"
@@ -32,7 +36,7 @@ export function Footer() {
         >
           <IconBrandGithub
             size={25}
-            className="text-bg-icon hover:text-text-section-header"
+            className="text-bg-icon hover:text-text-section-header hover:dark:hover:text-text-section-header-dark"
           />
         </a>
 
@@ -45,7 +49,7 @@ export function Footer() {
         >
           <IconBrandLinkedin
             size={25}
-            className="text-bg-icon hover:text-text-section-header"
+            className="text-bg-icon hover:text-text-section-header hover:dark:hover:text-text-section-header-dark"
           />
         </a>
 
@@ -56,7 +60,7 @@ export function Footer() {
         >
           <IconMail
             size={25}
-            className="text-bg-icon hover:text-text-section-header"
+            className="text-bg-icon hover:text-text-section-header hover:dark:hover:text-text-section-header-dark"
           />
         </a>
       </div>

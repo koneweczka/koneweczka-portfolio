@@ -1,8 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-// TODO: Delete not used colors later, moved to inline
-// TODO: Dark probably has to be moved after adding dark mode
-type ButtonVariant = "primary" | "secondary" | "dark" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "icon";
 type ButtonSize = "md" | "sm";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -14,14 +12,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const baseClasses =
   "inline-flex items-center justify-center rounded-xl font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-turquoise disabled:opacity-50 disabled:cursor-not-allowed";
 
-// TODO: Delete not used colors later
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-brand-turquoise text-text-brand hover:opacity-85",
+  // TODO: Check if I want other color for dark text - yes, I Want, right now only primary is changing bg color in dark mode
+  primary:
+    "bg-brand-turquoise dark:bg-brand-turquoise-dark text-text-brand dark:text-bg-dark hover:opacity-85 hover:dark:opacity-80",
   secondary:
     "bg-bg-button-secondary border border-brand-turquoise text-text-main hover:bg-brand-turquoise/15",
-  // TODO: Maybe primary/20 ? Check it later
-  ghost: "text-brand-turquoise hover:bg-brand-turquoise/10",
-  dark: "bg-brand-turquoise-dark text-bg-dark hover:opacity-80",
+  icon: "p-1 rounded-md hover:bg-brand-turquoise/20 text-brand-turquoise",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

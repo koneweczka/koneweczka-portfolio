@@ -1,3 +1,4 @@
+import { Chip } from "@/components/ui/Chip";
 import { Button } from "../components/ui/Button";
 import { SectionCard } from "../components/ui/SectionCard";
 
@@ -23,25 +24,14 @@ export function DesignSystemPreview() {
         >
           Secondary Button
         </Button>
-        <Button variant="ghost" onClick={() => console.log("Click me")}>
-          Button Ghost
-        </Button>
+        <Chip>Test Chip</Chip>
         {colorsLight}
       </SectionCard>
 
-      <SectionCard className="bg-bg-dark border text-brand-turquoise text-center">
+      <SectionCard className="bg-bg-dark text-brand-turquoise text-center">
         <h2>Dark Mode Background</h2>
         {buttonsDark}
-        {colorsDark}
-      </SectionCard>
-      <SectionCard className="bg-bg-dark-elevated border text-brand-turquoise text-center">
-        <h2>Dark Mode Elevated Background</h2>
-        {buttonsDark}
-        {colorsDark}
-      </SectionCard>
-      <SectionCard className="bg-bg-dark-colorzilla text-brand-turquoise text-center">
-        <h2>Dark Mode Colorzilla Background</h2>
-        {buttonsDark}
+        <Chip>Test Chip</Chip>
         {colorsDark}
       </SectionCard>
     </div>
@@ -52,13 +42,10 @@ const buttonsDark = (
   <div>
     <Button
       className="mr-2"
-      variant="dark"
+      variant="primary"
       onClick={() => console.log("Click me")}
     >
-      Button Dark Mode
-    </Button>
-    <Button variant="ghost" onClick={() => console.log("Click me")}>
-      Button Ghost
+      Primary Button
     </Button>
   </div>
 );
