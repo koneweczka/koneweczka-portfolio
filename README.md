@@ -1,75 +1,108 @@
-<!--  TODO: Change this later! -->
+# <img src="public/favicon.png" width="80" /> Koneweczka’s Developer Portfolio
 
-# React + TypeScript + Vite
+### React · TypeScript · Vite · Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+_Crafted with clarity, stability, and a touch of elven magic._
 
-Currently, two official plugins are available:
+Welcome, traveler!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This enchanted scroll is my personal spellbook - a gateway into my world as a Frontend Engineer, when you can discover:
 
-## React Compiler
+- **Who I Am** - my philosophy and approach to building delightful interfaces
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **The Magic Ingredients** - the core technologies behind this project
 
-## Expanding the ESLint configuration
+- **The Art of Crafting** how I shaped this portfolio into a magic experience
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **The After-Hours Among the Trees** What sparks my creativity when the code finally compiles
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+It's not only a resume - it's an experience sprinkled with ancient elven charm ✨
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🌟 View the Live Enchantment
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+<!-- TODO: Add link after deploying -->
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+_(enchantment loading...)_
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+[Click me!](https://...)
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+## ✨ Features and Spells Within This Repository
+
+- 🧝‍♀️ Elven UI Design — clean, elegant, readable interfaces with subtle magical accents
+
+- ⚛️ React + TypeScript Stability — great foundation for every spell
+
+- ⚡ Vite Swiftness — as swift as a forest deer
+
+- 🎨 Tailwind CSS with a custom theme — semantic tokens and unique palette
+
+- 🌗 Dark Mode Sorcery — harmonious colors for day & night in the forest
+
+- 🖼️ Personal Elven Illustrations — avatars & icons styled for this portfolio with AI help
+
+- 📱 Fully responsive — from pocket-sized runes (mobile) to wide spellbooks (desktops)
+
+- **🧪 CI/CD Readiness** — Designed for easy automation and deployment
+
+## ⚙️ Technical Weaving (Getting Started)
+
+If you wish to inspect the runes and components of this creation locally you will need some basic elfish knowledge:
+
+### Prerequisites
+
+- Node.js (v18+)
+- npm or Yarn
+
+And after that just follow the elder scroll orders:
+
+1.  **Clone the Ancient Grove:**
+
+    ```bash
+    git clone [https://github.com/koneweczka/koneweczka-portfolio.git](https://github.com/koneweczka/koneweczka-portfolio.git)
+
+    cd koneweczka-portfolio
+    ```
+
+2.  **Gather the Components:**
+    ```bash
+    npm install
+    ```
+3.  **Ignite the Dev Server:**
+    ```bash
+    npm run dev
+    ```
+    The magic portal will open at `http://localhost:5173` (or similar).
+
+After that you can use:
+
+### Available Spells (Scripts)
+
+| Script          | Purpose                                                  |
+| :-------------- | :------------------------------------------------------- |
+| `npm run dev`   | Starts the local development server (swiftness enabled). |
+| `npm run build` | Weaves the production bundle into the `/dist` folder.    |
+| `npm run lint`  | Checks the code for consistency and purity.              |
+
+## 💌 Contact the Wood Elf Crafter
+
+If you have questions, want to collaborate, or simply wish to say hello — send a friendly bat 🦇 or a message!
+
+- **GitHub:** [koneweczka](https://github.com/koneweczka)
+- **LinkedIn:** [Agnieszka Konefał](https://www.linkedin.com/in/agnieszka-konefa%C5%82-9a731bb2/)
+- **Email:** akonewka@gmail.com
+
+<!-- TODO: Update this!!! -->
+
+## 🔮 Future Enhancements
+
+- Smooth elven animations (Framer Motion)
+
+- Dedicated “Design System” page with Storybook
+
+- Visual tests for UI components
+
+- Personal projects
+
+---
+
+_Created by Koneweczka with React and a dash of elven magic. All rights reserved._

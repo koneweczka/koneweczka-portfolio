@@ -14,36 +14,42 @@ const NAV_ITEMS = [
 
 type Theme = "light" | "dark";
 
+function applyTheme(next: Theme) {
+  if (typeof document === "undefined") return;
+
+  const root = document.documentElement;
+
+  if (next === "dark") {
+    root.classList.add("dark");
+  } else {
+    root.classList.remove("dark");
+  }
+
+  localStorage.setItem("theme", next);
+}
+
 export function Header() {
   //  TODO: Maybe toggle?
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") {
+      return "light";
+    }
 
-  useEffect(() => {
     const stored = localStorage.getItem("theme") as Theme | null;
     const initial = stored === "dark" ? "dark" : "light";
 
     applyTheme(initial);
-    setTheme(initial);
-  }, []);
-
-  function applyTheme(next: Theme) {
-    const root = document.documentElement;
-
-    if (next === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-
-    localStorage.setItem("theme", next);
-  }
+    return initial;
+  });
 
   function toggleTheme() {
-    const next: Theme = theme === "light" ? "dark" : "light";
-    setTheme(next);
-    applyTheme(next);
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   }
+
+  useEffect(() => {
+    applyTheme(theme);
+  }, [theme]);
 
   function handleNavClick(id: string) {
     scrollToSection(id);
@@ -58,7 +64,7 @@ export function Header() {
             Koneweczka
           </h1>
 
-          <div className="flex items-center md:gap-2">
+          <div className="flex items-center gap-2">
             <ul className="hidden md:flex items-center gap-8 text-text-main dark:text-text-main-dark font-medium">
               {NAV_ITEMS.map((item) => (
                 <li
