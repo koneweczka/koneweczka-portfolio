@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* BACKGROUNDS */
   --color-bg: #daf4eb;
@@ -29,7 +31,8 @@
   --color-text-header-dark: #6cccd1;
 
   /* ICONS */
-  --color-contact-icon: #1ac3d6;
+  --color-contact-icon: #3aaeb5;
+  --color-contact-icon-dark: #1ac3d6;
   --color-leaf-icon: #008000;
   --color-leaf-icon-dark: #7fcbc9;
 
