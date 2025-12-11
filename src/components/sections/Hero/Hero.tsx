@@ -5,7 +5,6 @@ import { Chip } from "@/components/ui/Chip";
 
 export function Hero() {
   return (
-    // TODO: Here and in other sections on mobile I have a big margin top, fix it later
     <SectionCard
       className="flex flex-col gap-6 md:flex-row md:items-center"
       id="hero"
@@ -29,7 +28,6 @@ export function Hero() {
           >
             <Button>View CV</Button>
           </a>
-          {/* TODO: Check if I want some dark colors better here */}
           <Button
             variant="secondary"
             onClick={() => scrollToSection("contact")}

@@ -4,15 +4,12 @@ interface SectionCardProps {
   className?: string;
   children: ReactNode;
   id?: string;
-  // TODO: Title maybe optional?
-  title?: string;
 }
 
 export function SectionCard({
   className = "",
   children,
   id,
-  title,
 }: SectionCardProps) {
   const classes = [
     "border border-underline dark:border-underline-dark rounded-xl shadow-md p-4 mx-2 my-2",
@@ -23,7 +20,6 @@ export function SectionCard({
 
   return (
     <section className={classes} id={id}>
-      <h1>{title}</h1>
       {children}
     </section>
   );

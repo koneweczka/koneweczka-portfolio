@@ -13,7 +13,6 @@ const baseClasses =
   "inline-flex items-center justify-center rounded-xl font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-turquoise disabled:opacity-50 disabled:cursor-not-allowed";
 
 const variantClasses: Record<ButtonVariant, string> = {
-  // TODO: Check if I want other color for dark text - yes, I Want, right now only primary is changing bg color in dark mode
   primary:
     "bg-brand-turquoise dark:bg-brand-turquoise-dark text-text-brand dark:text-bg-dark hover:brightness-110 dark:hover:brightness-120 border border-underline dark:border-underline-dark",
   secondary:

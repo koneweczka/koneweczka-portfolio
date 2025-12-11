@@ -29,7 +29,6 @@ function applyTheme(next: Theme) {
 }
 
 export function Header() {
-  //  TODO: Maybe toggle?
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === "undefined") {
@@ -101,7 +100,7 @@ export function Header() {
               variant="icon"
               className="md:hidden transition p-1"
               aria-label="Toggle navigation"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen((prev) => !prev)}
             >
               {isOpen ? (
                 <IconX

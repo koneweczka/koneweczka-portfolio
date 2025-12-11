@@ -8,6 +8,7 @@ import { Header } from "./components/layout/Header/Header";
 import { Hero } from "./components/sections/Hero/Hero";
 // import { Projects } from "./components/sections/Projects/Projects";
 import { SkillsSection } from "./components/sections/SkillsSection/SkillsSection";
+import { CornerDecorations } from "./components/CornerDecorations";
 
 function App() {
   const [showPlayground, setShowPlayground] = useState(false);
@@ -15,47 +16,7 @@ function App() {
   return (
     <>
       <div className="bg-bg dark:bg-bg-dark min-h-screen relative overflow-hidden">
-        {/* TODO: Move repeated classes somewhere */}
-        <img
-          src="/images/corner-top-left.png"
-          alt="Dekoracja górny lewy róg"
-          className="hidden md:block dark:hidden pointer-events-none select-none absolute top-4 left-4 w-56 h-56 z-10"
-        />
-        <img
-          src="/images/dark-top-left.png"
-          alt="Dekoracja górny lewy róg"
-          className="hidden md:dark:block pointer-events-none select-none absolute top-4 left-4 w-56 h-56 z-10"
-        />
-        <img
-          src="/images/corner-top-right.png"
-          alt="Dekoracja górny prawy róg"
-          className="hidden md:block dark:hidden pointer-events-none select-none absolute top-4 right-4 w-56 h-56 z-10"
-        />
-        <img
-          src="/images/dark-top-right.png"
-          alt="Dekoracja górny prawy róg"
-          className="hidden md:dark:block pointer-events-none select-none absolute top-4 right-4 w-56 h-56 z-10"
-        />
-        <img
-          src="/images/corner-bottom-left.png"
-          alt="Dekoracja dolny lewy róg"
-          className="hidden md:block dark:hidden pointer-events-none select-none absolute bottom-4 left-4 w-56 h-56 z-10"
-        />
-        <img
-          src="/images/dark-bottom-left.png"
-          alt="Dekoracja dolny lewy róg"
-          className="hidden md:dark:block pointer-events-none select-none absolute bottom-4 left-4 w-56 h-56 z-10"
-        />
-        <img
-          src="/images/corner-bottom-right.png"
-          alt="Dekoracja dolny prawy róg"
-          className="hidden md:block dark:hidden pointer-events-none select-none absolute bottom-4 right-4 w-56 h-56 z-10"
-        />
-        <img
-          src="/images/dark-bottom-right.png"
-          alt="Dekoracja dolny prawy róg"
-          className="hidden md:dark:block pointer-events-none select-none absolute bottom-4 right-4 w-56 h-56 z-10"
-        />
+        <CornerDecorations />
         <div className="relative max-w-5xl mx-auto px-4">
           {/* TODO: This can be removed when creating Storybook */}
           {import.meta.env.DEV && (

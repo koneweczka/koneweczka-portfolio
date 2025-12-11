@@ -2,6 +2,7 @@ import { SectionCard } from "../../ui/SectionCard";
 import { SkillBox } from "@/components/sections/SkillsSection/SkillBox";
 import { SkillItem } from "@/components/sections/SkillsSection/SkillItem";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SKILL_GROUPS } from "./skills.data";
 
 export function SkillsSection() {
   return (
@@ -9,54 +10,15 @@ export function SkillsSection() {
       <SectionHeader>Skills & Technologies</SectionHeader>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 ">
-        <SkillBox title="Frontend Development">
-          {/* TODO: Maybe map these skills? Move to consts? */}
-          <ul className="space-y-1">
-            <SkillItem>React</SkillItem>
-            <SkillItem>TypeScript</SkillItem>
-            <SkillItem>JavaScript (ES6+)</SkillItem>
-            <SkillItem>HTML5 & CSS3</SkillItem>
-            <SkillItem>Storybook</SkillItem>
-          </ul>
-        </SkillBox>
-
-        <SkillBox title="Testing & Quality">
-          <ul className="space-y-1">
-            <SkillItem>React Testing Library</SkillItem>
-            <SkillItem>Vitest</SkillItem>
-            <SkillItem>Cypress</SkillItem>
-          </ul>
-        </SkillBox>
-
-        <SkillBox title="Backend, Data & Analytics">
-          <ul className="space-y-1">
-            <SkillItem>Node.js</SkillItem>
-            <SkillItem>Java, Kotlin (basic)</SkillItem>
-            <SkillItem>SQL</SkillItem>
-            <SkillItem>Data Analysis & Visualization (Looker)</SkillItem>
-            <SkillItem>Airflow (DAGs), ETL / data pipelines</SkillItem>
-          </ul>
-        </SkillBox>
-        <SkillBox title="DevOps / Platform">
-          <ul className="space-y-1">
-            <SkillItem>Git, Github, Bitbucket</SkillItem>
-            <SkillItem>CI/CD (GitHub Actions, Bamboo)</SkillItem>
-            <SkillItem>Docker, Podman, Insomnia</SkillItem>
-            <SkillItem>
-              Google Cloud Platform (BigQuery, GCS, Composer/Airflow)
-            </SkillItem>
-            <SkillItem>Monitoring & observability</SkillItem>
-            <SkillItem>SLA / SLO tracking</SkillItem>
-            <SkillItem>Capacity planning & performance forecasting</SkillItem>
-          </ul>
-        </SkillBox>
-        <SkillBox title="Tools & Collaboration">
-          <ul className="space-y-1">
-            <SkillItem>Jira</SkillItem>
-            <SkillItem>Figma (basic)</SkillItem>
-            <SkillItem>Technical documentation & onboarding</SkillItem>
-          </ul>
-        </SkillBox>
+        {SKILL_GROUPS.map((group) => (
+          <SkillBox key={group.title} title={group.title}>
+            <ul className="space-y-1">
+              {group.items.map((item) => (
+                <SkillItem key={item}>{item}</SkillItem>
+              ))}
+            </ul>
+          </SkillBox>
+        ))}
       </div>
     </SectionCard>
   );

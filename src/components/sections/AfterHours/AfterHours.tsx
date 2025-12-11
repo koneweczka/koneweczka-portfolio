@@ -11,7 +11,6 @@ export function AfterHours() {
           image="/images/gravel-cyclist.png"
         />
         <HobbyItem
-          // title="Minions Painter"
           title="Arcane Miniature Painter"
           image="/images/painting-minions.png"
         />
@@ -20,21 +19,15 @@ export function AfterHours() {
           image="/images/sailing.png"
         />
         <HobbyItem title="Rune-XP Huntress" image="/images/gaming.png" />
-        {/* TODO: Decide which one I want */}
-        {/* <HobbyItem
-          title="Spanish Sunseer"
-          image="/images/spanish-explorer.png"
-        /> */}
         <HobbyItem
           title="Spanish Sunseer"
-          image="/images/spanish-explorer2.png"
+          image="/images/spanish-explorer.png"
         />
       </div>
     </SectionCard>
   );
 }
 
-// TODO: Should be moved or not?
 function HobbyItem({ title, image }: { title: string; image: string }) {
   return (
     <div className="flex flex-col items-center mb-4 pt-2 pb-4 px-2 md:pb-6">
