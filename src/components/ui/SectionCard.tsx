@@ -15,7 +15,7 @@ export function SectionCard({
   title,
 }: SectionCardProps) {
   const classes = [
-    "border border-brand-green dark:border-brand-turquoise-dark rounded-xl shadow-md p-4 mx-2 my-2",
+    "border border-underline dark:border-underline-dark rounded-xl shadow-md p-4 mx-2 my-2",
     className,
   ]
     .filter(Boolean)

@@ -47,7 +47,7 @@ export function Hero() {
       </div>
 
       <div className="flex-1 mt-6 md:mt-0 flex justify-center">
-        <div className="max-w-3xs rounded-2xl border-5 border-brand-green-warmer dark:border-underline-dark overflow-hidden shadow-md">
+        <div className="max-w-3xs rounded-2xl border-5 border-underline dark:border-underline-dark overflow-hidden shadow-md">
           <img
             src="/images/avatar1.png"
             alt="Elvish Dev"

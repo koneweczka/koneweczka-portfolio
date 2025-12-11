@@ -1,5 +1,5 @@
-// TODO: This icons are for dark/light mode to use later
 import { useState } from "react";
+// TODO: This icons are for dark/light mode to use later
 // import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { scrollToSection } from "@/utils/scroll-to-section";
@@ -24,7 +24,7 @@ export function Header() {
   }
 
   return (
-    <header className="w-full sticky top-0 z-40 bg-bg-light dark:bg-bg-dark">
+    <header className="w-full sticky top-0 z-40 bg-bg dark:bg-bg-dark">
       <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3 p-4 rounded-xl my-2">
         <h1 className="font-semibold text-text-brand dark:text-text-brand-dark text-xl cursor-pointer">
           Koneweczka
@@ -34,7 +34,7 @@ export function Header() {
           {NAV_ITEMS.map((item) => (
             <li
               key={item.id}
-              className="cursor-pointer hover:text-text-brand hover:dark:text-text-brand-dark transition"
+              className="cursor-pointer hover:text-text-brand dark:hover:text-text-brand-dark transition"
               onClick={() => handleNavClick(item.id)}
             >
               {item.label}
@@ -50,12 +50,12 @@ export function Header() {
         >
           {isOpen ? (
             <IconX
-              className="text-text-section-header dark:text-text-section-header"
+              className="text-text-header dark:text-text-header"
               size={24}
             />
           ) : (
             <IconMenu2
-              className="text-text-section-header dark:text-text-section-header"
+              className="text-text-header dark:text-text-header"
               size={24}
             />
           )}
@@ -63,13 +63,13 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden border-t border-brand-green/60 dark:border-brand-violet">
+        <nav className="md:hidden border-t border-underline/60 dark:border-underline-dark">
           <ul className="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-text-main dark:text-text-main-dark font-medium">
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <button
                   type="button"
-                  className="w-full text-left hover:text-text-brand hover:dark:text-text-brand-dark transition"
+                  className="w-full text-left hover:text-text-brand dark:hover:text-text-brand-dark transition"
                   onClick={() => handleNavClick(item.id)}
                 >
                   {item.label}

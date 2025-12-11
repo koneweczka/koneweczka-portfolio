@@ -6,7 +6,7 @@ import { SectionCard } from "../components/ui/SectionCard";
 export function DesignSystemPreview() {
   return (
     <div>
-      <SectionCard className="text-center bg-bg-light">
+      <SectionCard className="text-center bg-bg">
         <h2 className="text-brand-turquoise">
           Buttons component with Light Mode background
         </h2>
@@ -57,10 +57,6 @@ const colorsLight = (
         This is text-brand-turquoise for light mode. Probably just for button
         bg.
       </h1>
-      <h2 className="text-3xl md:text-3xl font-bold text-brand-violet">
-        This is text-brand-violet for light mode. For boxes border and
-        underline.
-      </h2>
       <h2 className="text-3xl md:text-3xl font-bold text-brand-green">
         This is text-brand-green for light mode. For technologies chips.
       </h2>
@@ -73,12 +69,12 @@ const colorsLight = (
       <p className="text-text-main text-sm md:text-base tracking-wide ">
         This text is text-main for light mode ✨ For Nav bar and main text.
       </p>
-      <p className="text-text-section-header text-sm md:text-base tracking-wide ">
-        This text is text-section-header for light mode ✨ For Sections Headers
-        like About Me.
+      <p className="text-text-header text-sm md:text-base tracking-wide ">
+        This text is text-header for light mode ✨ For Sections Headers like
+        About Me.
       </p>
-      <p className="text-bg-icon text-sm md:text-base tracking-wide ">
-        This text is bg-icon for light mode ✨ For icons and open CV.
+      <p className="text-contact-icon text-sm md:text-base tracking-wide ">
+        This text is contact-icon for light mode ✨ For icons and open CV.
       </p>
     </div>
   </div>
@@ -91,10 +87,6 @@ const colorsDark = (
         This is text-brand-turquoise-dark for dark mode. probably just for
         button bg.
       </h1>
-      <h2 className="text-3xl md:text-3xl font-bold text-brand-violet">
-        This is text-brand-violet for light mode. I leave it here, maybe I use
-        it on drk mode for headers About Me as well.
-      </h2>
     </div>
     <div className="flex-1 mt-6 md:mt-0">
       <p className="text-text-brand-dark text-sm md:text-base tracking-wide ">
@@ -108,12 +100,12 @@ const colorsDark = (
         This text is text-projects-names-dark for light mode ✨ For Nav bar and
         main text.
       </p>
-      <p className="text-text-section-header-dark text-sm md:text-base tracking-wide ">
-        This text is text-section-header for dark mode ✨ For Sections Headers
-        like About Me.
+      <p className="text-text-header-dark text-sm md:text-base tracking-wide ">
+        This text is text-header for dark mode ✨ For Sections Headers like
+        About Me.
       </p>
-      <p className="text-bg-icon text-sm md:text-base tracking-wide ">
-        This text is bg-icon for light mode ✨ For icons and open CV.
+      <p className="text-contact-icon text-sm md:text-base tracking-wide ">
+        This text is contact-icon for light mode ✨ For icons and open CV.
       </p>
     </div>
   </div>

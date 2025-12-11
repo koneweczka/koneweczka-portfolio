@@ -36,7 +36,7 @@ export function Footer() {
         >
           <IconBrandGithub
             size={25}
-            className="text-bg-icon hover:text-text-section-header hover:dark:hover:text-text-section-header-dark"
+            className="text-contact-icon hover:text-text-header dark:hover:hover:text-text-header-dark"
           />
         </a>
 
@@ -49,7 +49,7 @@ export function Footer() {
         >
           <IconBrandLinkedin
             size={25}
-            className="text-bg-icon hover:text-text-section-header hover:dark:hover:text-text-section-header-dark"
+            className="text-contact-icon hover:text-text-header dark:hover:hover:text-text-header-dark"
           />
         </a>
 
@@ -60,7 +60,7 @@ export function Footer() {
         >
           <IconMail
             size={25}
-            className="text-bg-icon hover:text-text-section-header hover:dark:hover:text-text-section-header-dark"
+            className="text-contact-icon hover:text-text-header dark:hover:hover:text-text-header-dark"
           />
         </a>
       </div>

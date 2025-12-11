@@ -15,9 +15,9 @@ const baseClasses =
 const variantClasses: Record<ButtonVariant, string> = {
   // TODO: Check if I want other color for dark text - yes, I Want, right now only primary is changing bg color in dark mode
   primary:
-    "bg-brand-turquoise dark:bg-brand-turquoise-dark text-text-brand dark:text-bg-dark hover:opacity-85 hover:dark:opacity-80",
+    "bg-brand-turquoise dark:bg-brand-turquoise-dark text-text-brand dark:text-bg-dark hover:brightness-110 dark:hover:brightness-120 border border-underline dark:border-underline-dark",
   secondary:
-    "bg-bg-button-secondary border border-brand-turquoise text-text-main hover:bg-brand-turquoise/15",
+    "bg-surface-button dark:bg-surface-button-dark border border-brand-turquoise dark:border-brand-turquoise-dark text-text-main dark:text-text-main-dark hover:bg-brand-turquoise/30 dark:hover:bg-brand-turquoise-dark/30",
   icon: "p-1 rounded-md hover:bg-brand-turquoise/20 text-brand-turquoise",
 };
 

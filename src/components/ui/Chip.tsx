@@ -11,9 +11,9 @@ export function Chip({ children, className }: ChipProps) {
       className={`
         inline-flex items-center px-3 py-1 
         rounded-full text-sm font-medium
-        bg-bg-chip text-text-main 
-        dark:bg-bg-chip-dark dark:text-brand-turquoise
-        shadow-sm border border-brand-green-warmer/30
+        bg-brand-green dark:bg-brand-green-dark
+        text-text-brand dark:text-text-brand-dark
+        shadow-sm border border-underline dark:border-underline-dark
         ${className}
       `}
     >

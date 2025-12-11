@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-bg-light dark:bg-bg-dark min-h-screen relative overflow-hidden">
+      <div className="bg-bg dark:bg-bg-dark min-h-screen relative overflow-hidden">
         {/* TODO: Move repeated classes somewhere */}
         <img
           src="/images/corner-top-left.png"
