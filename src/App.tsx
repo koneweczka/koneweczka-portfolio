@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AboutMe } from "./components/sections/AboutMe/About Me";
+import { AboutMe } from "./components/sections/AboutMe/AboutMe";
 import { AfterHours } from "./components/sections/AfterHours/AfterHours";
 import { Button } from "./components/ui/Button";
 import { DesignSystemPreview } from "./dev/DesignSystemPreview";
