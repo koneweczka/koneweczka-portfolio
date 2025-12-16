@@ -53,10 +53,10 @@ const buttonsDark = (
 const colorsLight = (
   <div className="flex flex-col gap-6 md:flex-row md:items-center">
     <div className="flex-1 space-y-4 mt-2">
-      <h1 className="text-3xl md:text-4xl font-bold text-brand-turquoise">
+      <h2 className="text-3xl md:text-4xl font-bold text-brand-turquoise">
         This is text-brand-turquoise for light mode. Probably just for button
         bg.
-      </h1>
+      </h2>
       <h2 className="text-3xl md:text-3xl font-bold text-brand-green">
         This is text-brand-green for light mode. For technologies chips.
       </h2>
@@ -83,10 +83,10 @@ const colorsLight = (
 const colorsDark = (
   <div className="flex flex-col gap-6 md:flex-row md:items-center">
     <div className="flex-1 space-y-4 mt-2">
-      <h1 className="text-3xl md:text-4xl font-bold text-brand-turquoise-dark">
+      <h2 className="text-3xl md:text-4xl font-bold text-brand-turquoise-dark">
         This is text-brand-turquoise-dark for dark mode. probably just for
         button bg.
-      </h1>
+      </h2>
     </div>
     <div className="flex-1 mt-6 md:mt-0">
       <p className="text-text-brand-dark text-sm md:text-base tracking-wide ">

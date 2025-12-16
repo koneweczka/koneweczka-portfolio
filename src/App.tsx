@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-bg dark:bg-bg-dark min-h-screen relative overflow-hidden">
+      <div className="bg-bg dark:bg-bg-dark min-h-screen relative">
         <CornerDecorations />
         <div className="relative max-w-5xl mx-auto px-4">
           {/* TODO: This can be removed when creating Storybook */}

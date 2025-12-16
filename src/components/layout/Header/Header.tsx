@@ -52,29 +52,44 @@ export function Header() {
 
   function handleNavClick(id: string) {
     scrollToSection(id);
-    setIsOpen(!isOpen);
+    setIsOpen(false);
   }
 
   return (
     <header className="w-full sticky top-0 z-40 bg-bg dark:bg-bg-dark">
       <div className="max-w-5xl mx-auto px-4 py-3 p-4 rounded-xl">
         <div className="flex items-center justify-between">
-          <h1 className="font-semibold text-text-brand dark:text-text-brand-dark text-xl cursor-pointer">
-            Koneweczka
-          </h1>
+          <a
+            href="#top"
+            className="font-semibold text-text-brand dark:text-text-brand-dark text-xl cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            <span className="sr-only">Homepage</span>
+            <span aria-hidden="true">Koneweczka</span>
+          </a>
 
           <div className="flex items-center gap-2">
-            <ul className="hidden md:flex items-center gap-8 text-text-main dark:text-text-main-dark font-medium">
-              {NAV_ITEMS.map((item) => (
-                <li
-                  key={item.id}
-                  className="cursor-pointer hover:text-text-brand dark:hover:text-text-brand-dark transition"
-                  onClick={() => handleNavClick(item.id)}
-                >
-                  {item.label}
-                </li>
-              ))}
-            </ul>
+            <nav aria-label="Main navigation" className="hidden md:block">
+              <ul className="md:flex items-center gap-8 text-text-main dark:text-text-main-dark font-medium">
+                {NAV_ITEMS.map((item) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className="hover:text-text-brand dark:hover:text-text-brand-dark transition"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleNavClick(item.id);
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
             <Button
               variant="icon"
@@ -82,6 +97,7 @@ export function Header() {
               aria-label={
                 theme === "light" ? "Enable dark mode" : "Enable light mode"
               }
+              aria-pressed={theme === "dark"}
               onClick={toggleTheme}
             >
               {theme === "light" ? (
@@ -100,6 +116,8 @@ export function Header() {
               variant="icon"
               className="md:hidden transition p-1"
               aria-label="Toggle navigation"
+              aria-expanded={isOpen}
+              aria-controls="mobile-nav"
               onClick={() => setIsOpen((prev) => !prev)}
             >
               {isOpen ? (
@@ -118,17 +136,17 @@ export function Header() {
         </div>
 
         {isOpen && (
-          <nav className="md:hidden border-t border-underline/60 dark:border-underline-dark">
-            <ul className="px-4 py-3 flex flex-col gap-3 text-text-main dark:text-text-main-dark font-medium">
+          <nav
+            id="mobile-nav"
+            className="md:hidden border-t border-underline/60 dark:border-underline-dark"
+            aria-label="Mobile navigation"
+          >
+            <ul className="px-4 py-3 flex flex-col gap-2 text-text-main dark:text-text-main-dark font-medium">
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
-                  <button
-                    type="button"
-                    className="w-full text-left hover:text-text-brand dark:hover:text-text-brand-dark transition"
-                    onClick={() => handleNavClick(item.id)}
-                  >
+                  <Button variant="nav" onClick={() => handleNavClick(item.id)}>
                     {item.label}
-                  </button>
+                  </Button>
                 </li>
               ))}
             </ul>
