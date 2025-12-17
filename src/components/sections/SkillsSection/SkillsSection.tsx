@@ -6,8 +6,12 @@ import { SKILL_GROUPS } from "./skills.data";
 
 export function SkillsSection() {
   return (
-    <SectionCard className="space-y-4 md:space-y-6 " id="skills">
-      <SectionHeader>Skills & Technologies</SectionHeader>
+    <SectionCard
+      className="space-y-4 md:space-y-6 "
+      id="skills"
+      labelledBy="skills-heading"
+    >
+      <SectionHeader id="skills-heading">Skills & Technologies</SectionHeader>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 ">
         {SKILL_GROUPS.map((group) => (

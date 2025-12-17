@@ -3,8 +3,12 @@ import { SectionCard } from "../../ui/SectionCard";
 
 export function AfterHours() {
   return (
-    <SectionCard className="text-center" id="after-hours">
-      <SectionHeader>After Hours</SectionHeader>
+    <SectionCard
+      className="text-center"
+      id="after-hours"
+      labelledBy="after-hours-heading"
+    >
+      <SectionHeader id="after-hours-heading">After Hours</SectionHeader>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
         <HobbyItem
           title="Forest Gravel Rider"
@@ -34,7 +38,7 @@ function HobbyItem({ title, image }: { title: string; image: string }) {
       <div className="w-40 h-40 md:w-44 md:h-44 flex items-center justify-center">
         <img
           src={image}
-          alt="Elvish Dev"
+          alt={title}
           className="max-w-full max-h-full object-contain"
         />
       </div>

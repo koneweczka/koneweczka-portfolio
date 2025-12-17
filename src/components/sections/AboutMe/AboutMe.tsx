@@ -3,8 +3,12 @@ import { SectionCard } from "../../ui/SectionCard";
 
 export function AboutMe() {
   return (
-    <SectionCard className="space-y-4 md:space-y-6" id="about">
-      <SectionHeader>About Me</SectionHeader>
+    <SectionCard
+      className="space-y-4 md:space-y-6"
+      id="about"
+      labelledBy="about-heading"
+    >
+      <SectionHeader id="about-heading">About Me</SectionHeader>
       <p className="text-text-main dark:text-text-main-dark leading-relaxed">
         I am a Front-end & Platform Engineer with experience in React/TypeScript
         and a strong background in service reliability and data-driven

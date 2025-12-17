@@ -9,6 +9,8 @@ export function SkillItem({ children }: { children: ReactNode }) {
           size={16}
           className="shrink-0 mt-0.5"
           stroke="currentColor"
+          aria-hidden="true"
+          focusable="false"
         />
       </div>
       <span>{children}</span>
