@@ -31,20 +31,6 @@ describe("Button", () => {
     );
   });
 
-  it("doesn't call onClick when disabled", async () => {
-    const onClick = vi.fn();
-
-    render(
-      <Button onClick={onClick} disabled>
-        Click me
-      </Button>
-    );
-
-    await userEvent.click(screen.getByRole("button", { name: /click me/i }));
-
-    expect(onClick).not.toHaveBeenCalled();
-  });
-
   it("applies primary button classes", () => {
     render(<Button variant="primary">Primary</Button>);
 

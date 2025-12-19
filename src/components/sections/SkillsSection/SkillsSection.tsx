@@ -18,7 +18,7 @@ export function SkillsSection() {
           <SkillBox key={group.title} title={group.title}>
             <ul className="space-y-1">
               {group.items.map((item) => (
-                <SkillItem key={item}>{item}</SkillItem>
+                <SkillItem key={item} label={item} />
               ))}
             </ul>
           </SkillBox>

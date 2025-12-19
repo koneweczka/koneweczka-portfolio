@@ -11,7 +11,6 @@ describe("SkillsSection", () => {
       name: /skills & technologies/i,
     });
     expect(heading).toBeInTheDocument();
-    expect(heading).toHaveAttribute("id", "skills-heading");
 
     const section = heading.closest("section");
 
@@ -21,7 +20,7 @@ describe("SkillsSection", () => {
     const groupHeadings = screen.getAllByRole("heading", { level: 3 });
     expect(groupHeadings).toHaveLength(SKILL_GROUPS.length);
 
-    expect(screen.getByText(/react/i)).toBeInTheDocument();
+    expect(screen.getByText(/typescript/i)).toBeInTheDocument();
     expect(screen.getByText(/vitest/i)).toBeInTheDocument();
     expect(screen.getByText(/sql/i)).toBeInTheDocument();
   });

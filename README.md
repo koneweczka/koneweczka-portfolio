@@ -1,4 +1,8 @@
-# <img src="public/favicon.png" width="80" /> Koneweczka’s Developer Portfolio
+<p align="left">
+  <img src="public/favicon.png" width="80" alt="Koneweczka elf favicon" />
+</p>
+
+# Koneweczka’s Developer Portfolio
 
 ### React · TypeScript · Vite · Tailwind CSS
 
@@ -20,11 +24,9 @@ It's not only a resume - it's an experience sprinkled with ancient elven charm �
 
 ## 🌟 View the Live Enchantment
 
-<!-- TODO: Add link after deploying -->
-
 _(enchantment loading...)_
 
-[Click me!](https://...)
+[Click me!](https://koneweczka.github.io/koneweczka-portfolio/)
 
 ## ✨ Features and Spells Within This Repository
 
@@ -55,25 +57,15 @@ If you wish to inspect the runes and components of this creation locally you wil
 
 And after that just follow the elder scroll orders:
 
-1.  **Clone the Ancient Grove:**
-
-    ```bash
-    git clone [https://github.com/koneweczka/koneweczka-portfolio.git](https://github.com/koneweczka/koneweczka-portfolio.git)
-
-    cd koneweczka-portfolio
-    ```
-
-2.  **Gather the Components:**
+1.  **Gather the Components:**
     ```bash
     npm install
     ```
-3.  **Ignite the Dev Server:**
+2.  **Ignite the Dev Server:**
     ```bash
     npm run dev
     ```
-    The magic portal will open at `http://localhost:5173` (or similar).
-
-After that you can use:
+    The magic portal will open at `http://localhost:5173`.
 
 ### Available Spells (Scripts)
 

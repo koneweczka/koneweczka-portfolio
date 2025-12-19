@@ -5,7 +5,7 @@ describe("SkillItem", () => {
   it("renders list item content", () => {
     render(
       <ul>
-        <SkillItem>TypeScript</SkillItem>
+        <SkillItem label="TypeScript" />
       </ul>
     );
 
