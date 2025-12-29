@@ -5,27 +5,16 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-      (() => {
+      (function () {
         const stored = localStorage.getItem("theme");
 
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-        if (stored === "dark") {
-          document.documentElement.classList.add("dark");
-          return;
-        }
-        if (stored === "light") {
-          document.documentElement.classList.remove("dark");
-          return;
-        }
+        const isDark = stored ? stored === "dark" : prefersDark;
 
-        if (prefersDark) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
+        document.documentElement.classList.toggle("dark", isDark);
       })();
     </script>
     <title>Koneweczka Portfolio</title>

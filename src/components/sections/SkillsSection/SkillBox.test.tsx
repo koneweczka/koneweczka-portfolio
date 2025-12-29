@@ -13,8 +13,8 @@ describe("SkillBox", () => {
 
     expect(
       screen.getByRole("heading", { level: 3, name: /frontend development/i })
-    ).toBeInTheDocument();
+    ).toBeVisible();
 
-    expect(screen.getByText("React")).toBeInTheDocument();
+    expect(screen.getByText("React")).toBeVisible();
   });
 });

@@ -6,7 +6,6 @@ import { DesignSystemPreview } from "./dev/DesignSystemPreview";
 import { Footer } from "./components/layout/Footer/Footer";
 import { Header } from "./components/layout/Header/Header";
 import { Hero } from "./components/sections/Hero/Hero";
-// import { Projects } from "./components/sections/Projects/Projects";
 import { SkillsSection } from "./components/sections/SkillsSection/SkillsSection";
 import { CornerDecorations } from "./components/CornerDecorations";
 
@@ -33,8 +32,6 @@ function App() {
           <Hero />
           <AboutMe />
           <SkillsSection />
-          {/* TODO: Uncomment when added */}
-          {/* <Projects /> */}
           <AfterHours />
           <Footer />
         </div>

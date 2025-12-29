@@ -3,16 +3,28 @@ import { IconMoonStars, IconSun, IconMenu2, IconX } from "@tabler/icons-react";
 import { scrollToSection } from "@/utils/scroll-to-section";
 import { Button } from "@/components/ui/Button";
 
-const NAV_ITEMS = [
+type SectionId = "about" | "skills" | "after-hours" | "contact";
+
+type NavItem = {
+  id: SectionId;
+  label: string;
+};
+
+const NAV_ITEMS: NavItem[] = [
   { id: "about", label: "About Me" },
   { id: "skills", label: "Skills" },
-  // TODO: Uncomment when added
-  // { id: "projects", label: "Projects" },
   { id: "after-hours", label: "After Hours" },
   { id: "contact", label: "Contact" },
 ];
 
+const THEME_STORAGE_KEY = "theme";
+
 type Theme = "light" | "dark";
+
+const THEME_ICON_PROPS = {
+  size: 22,
+  className: "text-contact-icon dark:text-contact-icon-dark",
+};
 
 function applyTheme(next: Theme) {
   if (typeof document === "undefined") return;
@@ -25,7 +37,7 @@ function applyTheme(next: Theme) {
     root.classList.remove("dark");
   }
 
-  localStorage.setItem("theme", next);
+  localStorage.setItem(THEME_STORAGE_KEY, next);
 }
 
 export function Header() {
@@ -35,12 +47,12 @@ export function Header() {
       return "light";
     }
 
-    const stored = localStorage.getItem("theme") as Theme | null;
-    const initial = stored === "dark" ? "dark" : "light";
+    const stored = localStorage.getItem(THEME_STORAGE_KEY);
 
-    applyTheme(initial);
-    return initial;
+    return stored === "dark" ? "dark" : "light";
   });
+
+  const ThemeIcon = theme === "light" ? IconMoonStars : IconSun;
 
   function toggleTheme() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
@@ -50,7 +62,7 @@ export function Header() {
     applyTheme(theme);
   }, [theme]);
 
-  function handleNavClick(id: string) {
+  function handleNavClick(id: SectionId) {
     scrollToSection(id);
     setIsOpen(false);
   }
@@ -100,17 +112,7 @@ export function Header() {
               aria-pressed={theme === "dark"}
               onClick={toggleTheme}
             >
-              {theme === "light" ? (
-                <IconMoonStars
-                  size={22}
-                  className="text-contact-icon dark:text-contact-icon-dark"
-                />
-              ) : (
-                <IconSun
-                  size={22}
-                  className="text-contact-icon dark:text-contact-icon-dark"
-                />
-              )}
+              <ThemeIcon {...THEME_ICON_PROPS} />
             </Button>
             <Button
               variant="icon"
@@ -136,23 +138,35 @@ export function Header() {
         </div>
 
         {isOpen && (
-          <nav
-            id="mobile-nav"
-            className="md:hidden border-t border-underline/60 dark:border-underline-dark"
-            aria-label="Mobile navigation"
-          >
-            <ul className="px-4 py-3 flex flex-col gap-2 text-text-main dark:text-text-main-dark font-medium">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.id}>
-                  <Button variant="nav" onClick={() => handleNavClick(item.id)}>
-                    {item.label}
-                  </Button>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <MobileNavigation items={NAV_ITEMS} onNavigate={handleNavClick} />
         )}
       </div>
     </header>
+  );
+}
+
+function MobileNavigation({
+  items,
+  onNavigate,
+}: {
+  items: NavItem[];
+  onNavigate: (id: SectionId) => void;
+}) {
+  return (
+    <nav
+      id="mobile-nav"
+      className="md:hidden border-t border-underline/60 dark:border-underline-dark"
+      aria-label="Mobile navigation"
+    >
+      <ul className="px-4 py-3 flex flex-col gap-2 text-text-main dark:text-text-main-dark font-medium">
+        {items.map((item) => (
+          <li key={item.id}>
+            <Button variant="nav" onClick={() => onNavigate(item.id)}>
+              {item.label}
+            </Button>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

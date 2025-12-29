@@ -5,7 +5,7 @@ describe("Chip", () => {
   it("renders children", async () => {
     render(<Chip>React</Chip>);
 
-    expect(screen.getByText("React")).toBeInTheDocument();
+    expect(screen.getByText("React")).toBeVisible();
   });
 
   it("applies base classes", () => {
@@ -13,10 +13,12 @@ describe("Chip", () => {
 
     const chip = screen.getByText("React");
 
-    expect(chip).toHaveClass("inline-flex");
-    expect(chip).toHaveClass("rounded-full");
-    expect(chip).toHaveClass("bg-brand-green");
-    expect(chip).toHaveClass("border-underline");
+    expect(chip).toHaveClass(
+      "inline-flex",
+      "rounded-full",
+      "bg-brand-green",
+      "border-underline"
+    );
   });
 
   it("merges custom className", () => {

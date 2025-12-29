@@ -5,8 +5,8 @@ describe("Footer", () => {
   it("renders brand signature", () => {
     render(<Footer />);
 
-    expect(screen.getByText(/koneweczka/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/love/i)).toBeInTheDocument();
+    expect(screen.getByText(/koneweczka/i)).toBeVisible();
+    expect(screen.getByLabelText(/love/i)).toBeVisible();
   });
 
   it("github link has correct url and attributes", () => {

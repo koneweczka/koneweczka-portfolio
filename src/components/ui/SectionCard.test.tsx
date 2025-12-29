@@ -9,13 +9,14 @@ describe("SectionCard", () => {
       </SectionCard>
     );
 
-    expect(screen.getByText("Content")).toBeInTheDocument();
+    expect(screen.getByText("Content")).toBeVisible();
   });
 
   it("applies id when provided", () => {
     render(<SectionCard id="about">About Me</SectionCard>);
 
     const section = screen.getByText("About Me").closest("section");
+    expect(section).not.toBeNull();
     expect(section).toHaveAttribute("id", "about");
   });
 
@@ -23,6 +24,7 @@ describe("SectionCard", () => {
     render(<SectionCard className="new-class">Content</SectionCard>);
 
     const section = screen.getByText("Content").closest("section");
+    expect(section).not.toBeNull();
     expect(section).toHaveClass("new-class");
   });
 });

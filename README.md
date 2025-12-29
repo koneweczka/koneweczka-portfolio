@@ -10,17 +10,17 @@ _Crafted with clarity, stability, and a touch of elven magic._
 
 Welcome, traveler!
 
-This enchanted scroll is my personal spellbook - a gateway into my world as a Frontend Engineer, when you can discover:
+This enchanted scroll is my personal spellbook - a gateway into my world as a Frontend Engineer, where you can discover:
 
 - **Who I Am** - my philosophy and approach to building delightful interfaces
 
 - **The Magic Ingredients** - the core technologies behind this project
 
-- **The Art of Crafting** how I shaped this portfolio into a magic experience
+- **The Art of Crafting** - how I shaped this portfolio into a magic experience
 
-- **The After-Hours Among the Trees** What sparks my creativity when the code finally compiles
+- **The After-Hours Among the Trees** - what sparks my creativity when the code finally compiles
 
-It's not only a resume - it's an experience sprinkled with ancient elven charm ✨
+It's not just a resume - it's an experience sprinkled with ancient elven charm ✨
 
 ## 🌟 View the Live Enchantment
 
@@ -69,11 +69,14 @@ And after that just follow the elder scroll orders:
 
 ### Available Spells (Scripts)
 
-| Script          | Purpose                                                  |
-| :-------------- | :------------------------------------------------------- |
-| `npm run dev`   | Starts the local development server (swiftness enabled). |
-| `npm run build` | Weaves the production bundle into the `/dist` folder.    |
-| `npm run lint`  | Checks the code for consistency and purity.              |
+| Script               | Purpose                                               |
+| :------------------- | :---------------------------------------------------- |
+| `npm run dev`        | Starts the local development server.                  |
+| `npm run build`      | Weaves the production bundle into the `/dist` folder. |
+| `npm run preview`    | Serves the production build locally for verification. |
+| `npm run lint`       | Checks the code for consistency and purity.           |
+| `npm run test`       | Runs the test suite once.                             |
+| `npm run test:watch` | Runs tests in watch mode during development.          |
 
 ## 💌 Contact the Wood Elf Crafter
 

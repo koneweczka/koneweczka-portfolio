@@ -13,7 +13,7 @@ export function AfterHours() {
         <HobbyItem
           title="Forest Gravel Rider"
           image="/images/gravel-cyclist.webp"
-          className="scale-110"
+          className="scale-120"
         />
         <HobbyItem
           title="Arcane Miniature Painter"
@@ -50,9 +50,7 @@ function HobbyItem({
           alt={title}
           loading="lazy"
           decoding="async"
-          className={["max-w-full max-h-full object-contain", className]
-            .filter(Boolean)
-            .join(" ")}
+          className={`max-w-full max-h-full object-contain ${className ?? ""}`}
         />
       </div>
       <h3 className="mt-3 text-lg font-semibold text-text-brand dark:text-text-brand-dark">

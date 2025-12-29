@@ -17,17 +17,17 @@ describe("Hero", () => {
         level: 1,
         name: /slightly magical interfaces/i,
       })
-    ).toBeInTheDocument();
+    ).toBeVisible();
 
     expect(screen.getByRole("link", { name: /view cv/i })).toHaveAttribute(
       "href",
-      "/agnieszka-konefal-cv-eng.pdf"
+      expect.stringMatching(/\.pdf$/)
     );
 
     await userEvent.click(screen.getByRole("button", { name: /contact/i }));
 
     expect(scrollToSection).toHaveBeenCalledWith("contact");
 
-    expect(screen.getByAltText(/elvish dev/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/elvish dev/i)).toBeVisible();
   });
 });

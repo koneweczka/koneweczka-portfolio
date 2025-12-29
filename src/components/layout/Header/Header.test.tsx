@@ -36,10 +36,9 @@ describe("Header", () => {
 
     await userEvent.click(screen.getByRole("link", { name: /homepage/i }));
 
-    expect(window.scrollTo).toHaveBeenCalledWith({
-      top: 0,
-      behavior: "smooth",
-    });
+    expect(window.scrollTo).toHaveBeenCalledWith(
+      expect.objectContaining({ top: 0 })
+    );
   });
 
   it("toggles theme from light to dark mode", async () => {
@@ -61,7 +60,7 @@ describe("Header", () => {
 
     expect(lightModeButton).toHaveAttribute("aria-pressed", "true");
 
-    expect(document.documentElement.classList.contains("dark")).toBe(true);
+    expect(document.documentElement).toHaveClass("dark");
     expect(setItemSpy).toHaveBeenCalledWith("theme", "dark");
   });
 

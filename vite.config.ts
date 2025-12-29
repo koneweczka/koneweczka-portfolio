@@ -5,9 +5,9 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
-  base: "/koneweczka-portfolio/",
+  base: mode === "production" ? "/koneweczka-portfolio/" : "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
@@ -25,4 +25,4 @@ export default defineConfig({
       exclude: ["src/main.tsx", "src/vite-env.d.ts", "src/dev/**/*"],
     },
   },
-});
+}));

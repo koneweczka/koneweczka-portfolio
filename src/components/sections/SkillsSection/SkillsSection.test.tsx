@@ -10,7 +10,7 @@ describe("SkillsSection", () => {
       level: 2,
       name: /skills & technologies/i,
     });
-    expect(heading).toBeInTheDocument();
+    expect(heading).toBeVisible();
 
     const section = heading.closest("section");
 
@@ -20,8 +20,10 @@ describe("SkillsSection", () => {
     const groupHeadings = screen.getAllByRole("heading", { level: 3 });
     expect(groupHeadings).toHaveLength(SKILL_GROUPS.length);
 
-    expect(screen.getByText(/typescript/i)).toBeInTheDocument();
-    expect(screen.getByText(/vitest/i)).toBeInTheDocument();
-    expect(screen.getByText(/sql/i)).toBeInTheDocument();
+    const technologies = [/typescript/i, /vitest/i, /sql/i];
+
+    technologies.forEach((label) => {
+      expect(screen.getByText(label)).toBeVisible();
+    });
   });
 });

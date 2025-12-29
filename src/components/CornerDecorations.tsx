@@ -1,48 +1,48 @@
+type Corner = "top-left" | "top-right" | "bottom-left" | "bottom-right";
+
+const CORNER_CLASSES: Record<Corner, string> = {
+  "top-left": "top-4 left-4",
+  "top-right": "top-4 right-4",
+  "bottom-left": "bottom-4 left-4",
+  "bottom-right": "bottom-4 right-4",
+};
+
+function CornerImage({ src, className }: { src: string; className: string }) {
+  return (
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      className={`corner-img ${className}`}
+    />
+  );
+}
+
 export function CornerDecorations() {
-  const baseClass = "corner-img";
+  const corners: Corner[] = [
+    "top-left",
+    "top-right",
+    "bottom-left",
+    "bottom-right",
+  ];
 
   return (
     <>
-      <img
-        src="/images/corner-top-left.png"
-        alt="Dekoracja górny lewy róg"
-        className={`${baseClass} hidden  md:block dark:hidden top-4 left-4`}
-      />
-      <img
-        src="/images/dark-top-left.png"
-        alt="Dekoracja górny lewy róg"
-        className={`${baseClass} hidden md:dark:block top-4 left-4`}
-      />
-      <img
-        src="/images/corner-top-right.png"
-        alt="Dekoracja górny prawy róg"
-        className={`${baseClass} hidden md:block dark:hidden top-4 right-4`}
-      />
-      <img
-        src="/images/dark-top-right.png"
-        alt="Dekoracja górny prawy róg"
-        className={`${baseClass} hidden md:dark:block top-4 right-4`}
-      />
-      <img
-        src="/images/corner-bottom-left.png"
-        alt="Dekoracja dolny lewy róg"
-        className={`${baseClass} hidden md:block dark:hidden bottom-4 left-4`}
-      />
-      <img
-        src="/images/dark-bottom-left.png"
-        alt="Dekoracja dolny lewy róg"
-        className={`${baseClass} hidden md:dark:block bottom-4 left-4`}
-      />
-      <img
-        src="/images/corner-bottom-right.png"
-        alt="Dekoracja dolny prawy róg"
-        className={`${baseClass} hidden md:block dark:hidden bottom-4 right-4`}
-      />
-      <img
-        src="/images/dark-bottom-right.png"
-        alt="Dekoracja dolny prawy róg"
-        className={`${baseClass} hidden md:dark:block bottom-4 right-4`}
-      />
+      {corners.map((corner) => (
+        <CornerImage
+          key={`light-${corner}`}
+          src={`/images/corner-${corner}.png`}
+          className={`hidden md:block dark:hidden ${CORNER_CLASSES[corner]}`}
+        />
+      ))}
+
+      {corners.map((corner) => (
+        <CornerImage
+          key={`dark-${corner}`}
+          src={`/images/dark-${corner}.png`}
+          className={`hidden md:dark:block ${CORNER_CLASSES[corner]}`}
+        />
+      ))}
     </>
   );
 }

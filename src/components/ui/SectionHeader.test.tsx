@@ -7,7 +7,7 @@ describe("SectionHeader", () => {
 
     expect(
       screen.getByRole("heading", { level: 2, name: /about me/i })
-    ).toBeInTheDocument();
+    ).toBeVisible();
   });
 
   it("merges custom className", () => {

@@ -5,6 +5,11 @@ import {
   IconMail,
 } from "@tabler/icons-react";
 
+const CONTACT_ICON_CLASS =
+  "text-contact-icon hover:text-text-header dark:hover:text-text-header-dark";
+
+const CONTACT_ICON_SIZE = 25;
+
 export function Footer() {
   return (
     <footer
@@ -36,8 +41,8 @@ export function Footer() {
           aria-label="GitHub"
         >
           <IconBrandGithub
-            size={25}
-            className="text-contact-icon hover:text-text-header dark:hover:text-text-header-dark"
+            size={CONTACT_ICON_SIZE}
+            className={CONTACT_ICON_CLASS}
           />
         </a>
 
@@ -49,8 +54,8 @@ export function Footer() {
           aria-label="LinkedIn"
         >
           <IconBrandLinkedin
-            size={25}
-            className="text-contact-icon hover:text-text-header dark:hover:text-text-header-dark"
+            size={CONTACT_ICON_SIZE}
+            className={CONTACT_ICON_CLASS}
           />
         </a>
 
@@ -59,10 +64,7 @@ export function Footer() {
           className="transition hover:scale-105"
           aria-label="Email"
         >
-          <IconMail
-            size={25}
-            className="text-contact-icon hover:text-text-header dark:hover:text-text-header-dark"
-          />
+          <IconMail size={CONTACT_ICON_SIZE} className={CONTACT_ICON_CLASS} />
         </a>
       </div>
     </footer>

@@ -2,13 +2,14 @@ import { render, screen } from "@testing-library/react";
 import { AfterHours } from "./AfterHours";
 
 describe("AfterHours", () => {
-  it("renders section heading and hobby items", () => {
+  it("renders section heading and accessible attributes", () => {
     render(<AfterHours />);
 
     const heading = screen.getByRole("heading", {
       level: 2,
       name: /after hours/i,
     });
+
     expect(heading).toHaveAttribute("id", "after-hours-heading");
 
     const section = heading.closest("section");
@@ -21,28 +22,21 @@ describe("AfterHours", () => {
     render(<AfterHours />);
 
     const items = screen.getAllByRole("heading", { level: 3 });
-    expect(items).toHaveLength(5);
+    const images = screen.getAllByRole("img");
 
-    expect(screen.getAllByRole("img")).toHaveLength(5);
+    expect(items).not.toHaveLength(0);
+    expect(images).toHaveLength(items.length);
 
-    expect(
-      screen.getByRole("heading", { level: 3, name: /forest gravel rider/i })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", {
-        level: 3,
-        name: /arcane miniature painter/i,
-      })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", {
-        level: 3,
-        name: /lake serenity navigator/i,
-      })
-    ).toBeInTheDocument();
+    const hobbyHeadings = [
+      /forest gravel rider/i,
+      /arcane miniature painter/i,
+      /lake serenity navigator/i,
+      /rune-xp huntress/i,
+      /spanish sunseer/i,
+    ];
 
-    expect(
-      screen.getByRole("heading", { level: 3, name: /spanish sunseer/i })
-    ).toBeInTheDocument();
+    hobbyHeadings.forEach((name) => {
+      expect(screen.getByRole("heading", { level: 3, name })).toBeVisible();
+    });
   });
 });

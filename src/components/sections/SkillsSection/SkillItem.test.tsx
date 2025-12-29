@@ -9,7 +9,7 @@ describe("SkillItem", () => {
       </ul>
     );
 
-    expect(screen.getByText("TypeScript")).toBeInTheDocument();
-    expect(screen.getByText("TypeScript").closest("li")).toBeInTheDocument();
+    expect(screen.getByText("TypeScript")).toBeVisible();
+    expect(screen.getByText("TypeScript").closest("li")).not.toBeNull();
   });
 });

@@ -7,28 +7,27 @@ describe("App", () => {
 
     const heroHeading = screen.getByRole("heading", { level: 1 });
 
-    expect(heroHeading).toBeInTheDocument();
+    expect(heroHeading).toBeVisible();
     expect(heroHeading).toHaveTextContent(/slightly magical interfaces/i);
 
-    expect(
-      screen.getByRole("heading", { name: /about me/i })
-    ).toBeInTheDocument();
+    const sectionHeadings = [
+      /about me/i,
+      /skills & technologies/i,
+      /after hours/i,
+    ];
 
-    expect(
-      screen.getByRole("heading", { name: /skills & technologies/i })
-    ).toBeInTheDocument();
-
-    expect(
-      screen.getByRole("heading", { name: /after hours/i })
-    ).toBeInTheDocument();
+    sectionHeadings.forEach((name) => {
+      expect(screen.getByRole("heading", { name })).toBeVisible();
+    });
   });
 
-  it("render header and footer", () => {
+  it("renders navigation and footer links", () => {
     render(<App />);
 
-    expect(screen.getByRole("link", { name: /homepage/i })).toBeInTheDocument();
+    const links = [/homepage/i, /github/i, /email/i];
 
-    expect(screen.getByRole("link", { name: /github/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /email/i })).toBeInTheDocument();
+    links.forEach((name) => {
+      expect(screen.getByRole("link", { name })).toBeVisible();
+    });
   });
 });
