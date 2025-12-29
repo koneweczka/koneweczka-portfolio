@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="public/favicon.png" width="80" alt="Koneweczka elf favicon" />
+  <img src="./public/favicon.png" width="80" alt="Koneweczka elf favicon" />
 </p>
 
 # Koneweczka’s Developer Portfolio
