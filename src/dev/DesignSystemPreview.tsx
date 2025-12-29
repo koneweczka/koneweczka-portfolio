@@ -96,16 +96,12 @@ const colorsDark = (
       <p className="text-text-main-dark text-sm md:text-base tracking-wide ">
         This text is text-main-dark for dark mode✨ For Nav bar and main text.
       </p>
-      <p className="text-text-projects-names-dark text-sm md:text-base tracking-wide ">
-        This text is text-projects-names-dark for light mode ✨ For Nav bar and
-        main text.
-      </p>
       <p className="text-text-header-dark text-sm md:text-base tracking-wide ">
-        This text is text-header for dark mode ✨ For Sections Headers like
+        This text is text-header-dark for dark mode ✨ For Sections Headers like
         About Me.
       </p>
-      <p className="text-contact-icon text-sm md:text-base tracking-wide ">
-        This text is contact-icon for light mode ✨ For icons and open CV.
+      <p className="text-contact-icon-dark text-sm md:text-base tracking-wide ">
+        This text is contact-icon-dark for dark mode ✨ For icons and open CV.
       </p>
     </div>
   </div>
