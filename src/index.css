@@ -1,51 +1,48 @@
 @import "tailwindcss";
 
-/* TODO: Check if this is ok or I want to change */
-/* TODO: Delete not used colors later */
-@theme {
-  /* TODO: Old color was #3ee8d9, change it to more bluish one  */
-  --color-brand-turquoise: #3cccd9;
-  --color-brand-turquoise-dark: #34a7a7;
-  --color-brand-violet: #9b7fe0;
-  /* TODO: Is this for chips or can be used as underline border? */
-  --color-brand-green: #b7e4c7;
-  --color-brand-green-warmer: #a5d59e;
+@custom-variant dark (&:where(.dark, .dark *));
 
-  /* TODO: Delete not used colors later */
-  --color-bg-dark: #020617;
-  --color-bg-dark-elevated: #02091c;
-  --color-bg-dark-colorzilla: #0b0d11;
-  --color-bg-light: #daf4eb;
-
-  /* New Palette: */
-  /* TODO: Add colors for buttons hovers later */
-  /* Background colors for elements */
-  --color-bg-button-secondary: #d2ede4;
-  /* TODO: Check if this is ok */
-  --color-bg-button-secondary-dark: #283434;
-  /*  TODO: Check if this can be just green */
-  --color-bg-chip: #b9d7bb;
-  /* TODO:  It is #0C181A but it's too dark, check if this is ok */
-  --color-bg-chip-dark: #294245;
-  /* TODO: Check if this is ok or too light */
-  --color-bg-box-project: #bbe6da;
-  --color-bg-icon: #1ac3d6;
-
-  /* Texts colors */
-  --color-text-brand: #014052;
-  /* TODO: Check if it is ok or maybe #4EA39F */
-  --color-text-brand-dark: #74d9d5;
-  --color-text-main: #6e7977;
-  --color-text-main-dark: #9ca3af;
-  /*  TODO: It can also be #D8DAD8, check */
-  --color-text-projects-names-dark: #e5f4ff;
-  --color-text-section-header: #21b2cd;
-  --color-text-section-header-dark: #65b8a7;
-
-  --color-border-dark: #7be1ca;
+@layer utilities {
+  .corner-img {
+    @apply pointer-events-none select-none absolute w-56 h-56 z-10;
+  }
 }
 
-/* TODO: To delete later */
-* {
-  box-sizing: border-box;
+@theme {
+  /* BACKGROUNDS */
+  --color-bg: #daf4eb;
+  --color-bg-dark: #112226;
+
+  /* BRAND COLORS */
+  --color-brand-turquoise: #3cccd9;
+  --color-brand-turquoise-dark: #34a7a7;
+  --color-brand-green: #a5d59e;
+  --color-brand-green-dark: #294245;
+
+  /* SURFACE COLORS */
+  --color-surface-column: #bbe6da;
+  --color-surface-column-dark: #2e4f47;
+
+  --color-surface-button: #d2ede4;
+  --color-surface-button-dark: #345a53;
+
+  /* TEXT COLORS */
+  --color-text-main: #1e3f3b;
+  --color-text-main-dark: #e1f2f1;
+
+  --color-text-brand: #014052;
+  --color-text-brand-dark: #74d9d5;
+
+  --color-text-header: #21b2cd;
+  --color-text-header-dark: #6cccd1;
+
+  /* ICONS */
+  --color-contact-icon: #3aaeb5;
+  --color-contact-icon-dark: #1ac3d6;
+  --color-leaf-icon: #008000;
+  --color-leaf-icon-dark: #7fcbc9;
+
+  /* BORDERS & UNDERLINE */
+  --color-underline: #83b67c;
+  --color-underline-dark: #285b55;
 }
