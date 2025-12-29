@@ -71,14 +71,15 @@ And after that just follow the elder scroll orders:
 
 ### Available Spells (Scripts)
 
-| Script               | Purpose                                               |
-| :------------------- | :---------------------------------------------------- |
-| `npm run dev`        | Starts the local development server.                  |
-| `npm run build`      | Weaves the production bundle into the `/dist` folder. |
-| `npm run preview`    | Serves the production build locally for verification. |
-| `npm run lint`       | Checks the code for consistency and purity.           |
-| `npm run test`       | Runs the test suite once.                             |
-| `npm run test:watch` | Runs tests in watch mode during development.          |
+| Script                  | Purpose                                               |
+| :---------------------- | :---------------------------------------------------- |
+| `npm run dev`           | Starts the local development server.                  |
+| `npm run build`         | Weaves the production bundle into the `/dist` folder. |
+| `npm run preview`       | Serves the production build locally for verification. |
+| `npm run lint`          | Checks the code for consistency and purity.           |
+| `npm run test`          | Runs the test suite once.                             |
+| `npm run test:coverage` | Runs tests and generates a coverage report.           |
+| `npm run test:watch`    | Runs tests in watch mode during development.          |
 
 ## 💌 Contact the Wood Elf Crafter
 

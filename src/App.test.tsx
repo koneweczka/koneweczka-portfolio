@@ -5,7 +5,9 @@ describe("App", () => {
   it("render portfolio sections on initial load", () => {
     render(<App />);
 
-    const heroHeading = screen.getByRole("heading", { level: 1 });
+    const heroHeading = screen.getByRole("heading", {
+      name: /i build legible, slightly magical interfaces/i,
+    });
 
     expect(heroHeading).toBeVisible();
     expect(heroHeading).toHaveTextContent(/slightly magical interfaces/i);
