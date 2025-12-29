@@ -5,6 +5,7 @@
 [![CI](https://github.com/koneweczka/koneweczka-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/koneweczka/koneweczka-portfolio/actions/workflows/ci.yml)
 [![Deploy](https://img.shields.io/github/actions/workflow/status/koneweczka/koneweczka-portfolio/deploy.yml?label=Deploy&logo=github&logoColor=ffffff&labelColor=112226&color=3cccd9)](https://github.com/koneweczka/koneweczka-portfolio/actions/workflows/deploy.yml)
 [![Live](https://img.shields.io/badge/Live-GitHub%20Pages-3cccd9?labelColor=112226&logo=githubpages&logoColor=ffffff)](https://koneweczka.github.io/koneweczka-portfolio/)
+[![Coverage](https://img.shields.io/codecov/c/github/koneweczka/koneweczka-portfolio?label=Coverage&logo=codecov&logoColor=ffffff&labelColor=112226&color=a5d59e)](https://app.codecov.io/github/koneweczka/koneweczka-portfolio)
 
 # Koneweczka’s Developer Portfolio
 
