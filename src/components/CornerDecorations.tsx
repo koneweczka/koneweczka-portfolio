@@ -1,3 +1,5 @@
+import { publicUrl } from "@/utils/public-url";
+
 type Corner = "top-left" | "top-right" | "bottom-left" | "bottom-right";
 
 const CORNER_CLASSES: Record<Corner, string> = {
@@ -31,7 +33,7 @@ export function CornerDecorations() {
       {corners.map((corner) => (
         <CornerImage
           key={`light-${corner}`}
-          src={`/images/corner-${corner}.png`}
+          src={publicUrl(`images/corner-${corner}.png`)}
           className={`hidden md:block dark:hidden ${CORNER_CLASSES[corner]}`}
         />
       ))}
@@ -39,7 +41,7 @@ export function CornerDecorations() {
       {corners.map((corner) => (
         <CornerImage
           key={`dark-${corner}`}
-          src={`/images/dark-${corner}.png`}
+          src={publicUrl(`images/dark-${corner}.png`)}
           className={`hidden md:dark:block ${CORNER_CLASSES[corner]}`}
         />
       ))}

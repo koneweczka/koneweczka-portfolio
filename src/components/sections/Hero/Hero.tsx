@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/Button";
-import { SectionCard } from "../../ui/SectionCard";
-import { scrollToSection } from "@/utils/scroll-to-section";
 import { Chip } from "@/components/ui/Chip";
+import { publicUrl } from "@/utils/public-url";
+import { scrollToSection } from "@/utils/scroll-to-section";
+import { SectionCard } from "../../ui/SectionCard";
 
 export function Hero() {
   return (
@@ -22,7 +23,7 @@ export function Hero() {
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            href="/agnieszka-konefal-cv-eng.pdf"
+            href={publicUrl("agnieszka-konefal-cv-eng.pdf")}
             target="_blank"
             rel="noreferrer"
           >
@@ -47,7 +48,7 @@ export function Hero() {
       <div className="flex-1 mt-6 md:mt-0 flex justify-center">
         <div className="max-w-3xs rounded-2xl border-5 border-underline dark:border-underline-dark overflow-hidden shadow-md">
           <img
-            src="/images/avatar1.png"
+            src={publicUrl("images/avatar1.png")}
             alt="Elvish Dev"
             className="w-full h-auto object-cover"
           />

@@ -1,5 +1,6 @@
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { publicUrl } from "@/utils/public-url";
 import { SectionCard } from "../../ui/SectionCard";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function AfterHours() {
   return (
@@ -12,21 +13,24 @@ export function AfterHours() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
         <HobbyItem
           title="Forest Gravel Rider"
-          image="/images/gravel-cyclist.webp"
+          image={publicUrl("images/gravel-cyclist.webp")}
           className="scale-120"
         />
         <HobbyItem
           title="Arcane Miniature Painter"
-          image="/images/painting-minions.webp"
+          image={publicUrl("images/painting-minions.webp")}
         />
         <HobbyItem
           title="Lake Serenity Navigator"
-          image="/images/sailing.webp"
+          image={publicUrl("images/sailing.webp")}
         />
-        <HobbyItem title="Rune-XP Huntress" image="/images/gaming.webp" />
+        <HobbyItem
+          title="Rune-XP Huntress"
+          image={publicUrl("images/gaming.webp")}
+        />
         <HobbyItem
           title="Spanish Sunseer"
-          image="/images/spanish-explorer.webp"
+          image={publicUrl("images/spanish-explorer.webp")}
         />
       </div>
     </SectionCard>
