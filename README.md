@@ -2,6 +2,10 @@
   <img src="./public/favicon.png" width="80" alt="Koneweczka elf favicon" />
 </p>
 
+[![CI](https://github.com/koneweczka/koneweczka-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/koneweczka/koneweczka-portfolio/actions/workflows/ci.yml)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/koneweczka/koneweczka-portfolio/deploy.yml?label=Deploy&logo=github&logoColor=ffffff&labelColor=112226&color=3cccd9)](https://github.com/koneweczka/koneweczka-portfolio/actions/workflows/deploy.yml)
+[![Live](https://img.shields.io/badge/Live-GitHub%20Pages-3cccd9?labelColor=112226&logo=githubpages&logoColor=ffffff)](https://koneweczka.github.io/koneweczka-portfolio/)
+
 # Koneweczka’s Developer Portfolio
 
 ### React · TypeScript · Vite · Tailwind CSS
@@ -24,9 +28,7 @@ It's not just a resume - it's an experience sprinkled with ancient elven charm �
 
 ## 🌟 View the Live Enchantment
 
-_(enchantment loading...)_
-
-[Click me!](https://koneweczka.github.io/koneweczka-portfolio/)
+[Enter the live portfolio](https://koneweczka.github.io/koneweczka-portfolio/)
 
 ## ✨ Features and Spells Within This Repository
 
@@ -44,7 +46,7 @@ _(enchantment loading...)_
 
 - 📱 Fully responsive — from pocket-sized runes (mobile) to wide spellbooks (desktops)
 
-- **🧪 CI/CD Readiness** — Designed for easy automation and deployment
+- 🧪 CI/CD — Automated linting, testing, build & deployment via GitHub Actions
 
 ## ⚙️ Technical Weaving (Getting Started)
 
@@ -85,8 +87,6 @@ If you have questions, want to collaborate, or simply wish to say hello — send
 - **GitHub:** [koneweczka](https://github.com/koneweczka)
 - **LinkedIn:** [Agnieszka Konefał](https://www.linkedin.com/in/agnieszka-konefa%C5%82-9a731bb2/)
 - **Email:** akonewka@gmail.com
-
-<!-- TODO: Update this!!! -->
 
 ## 🔮 Future Enhancements
 
