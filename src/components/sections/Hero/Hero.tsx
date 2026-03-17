@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Chip } from "@/components/ui/Chip";
+import { CV_FILE_NAME } from "@/constants/assets";
+import { getButtonClasses } from "@/components/ui/button-styles";
 import { publicUrl } from "@/utils/public-url";
 import { scrollToSection } from "@/utils/scroll-to-section";
 import { SectionCard } from "../../ui/SectionCard";
@@ -23,11 +25,12 @@ export function Hero() {
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            href={publicUrl("agnieszka-konefal-cv-eng.pdf")}
+            href={publicUrl(CV_FILE_NAME)}
             target="_blank"
             rel="noreferrer"
+            className={getButtonClasses({ variant: "primary" })}
           >
-            <Button>View CV</Button>
+            View CV
           </a>
           <Button
             variant="secondary"

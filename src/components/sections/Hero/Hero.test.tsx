@@ -1,8 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { vi } from "vitest";
+import { CV_FILE_NAME } from "@/constants/assets";
 import { Hero } from "./Hero";
 import { scrollToSection } from "@/utils/scroll-to-section";
+import { publicUrl } from "@/utils/public-url";
 
 vi.mock("@/utils/scroll-to-section", () => ({
   scrollToSection: vi.fn(),
@@ -16,13 +18,14 @@ describe("Hero", () => {
       screen.getByRole("heading", {
         level: 1,
         name: /slightly magical interfaces/i,
-      })
+      }),
     ).toBeVisible();
 
-    expect(screen.getByRole("link", { name: /view cv/i })).toHaveAttribute(
-      "href",
-      expect.stringMatching(/\.pdf$/)
-    );
+    const cvLink = screen.getByRole("link", { name: /view cv/i });
+
+    expect(cvLink).toHaveAttribute("href", publicUrl(CV_FILE_NAME));
+    expect(cvLink).toHaveAttribute("target", "_blank");
+    expect(cvLink).toHaveAttribute("rel", "noreferrer");
 
     await userEvent.click(screen.getByRole("button", { name: /contact/i }));
 
